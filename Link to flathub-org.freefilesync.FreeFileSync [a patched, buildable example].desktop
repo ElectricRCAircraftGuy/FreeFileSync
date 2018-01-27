@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Link to flathub/org.freefilesync.FreeFileSync
+Type=Link
+URL=https://github.com/flathub/org.freefilesync.FreeFileSync
+Icon=text-html
+Name[en_US]=Link to flathub/org.freefilesync.FreeFileSync [a patched, buildable example]
