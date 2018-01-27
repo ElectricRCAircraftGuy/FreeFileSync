@@ -5,6 +5,7 @@
 // *****************************************************************************
 
 #include "main_dlg.h"
+#include <zen/warn_static.h> //GS added 
 #include <zen/format_unit.h>
 #include <zen/file_access.h>
 #include <zen/file_io.h>
@@ -4837,13 +4838,13 @@ void MainDialog::OnMenuCheckVersionAutomatically(wxCommandEvent& event)
 
     m_menuItemCheckVersionAuto->Check(updateCheckActive(globalCfg_.gui.lastUpdateCheck));
 
-    if (shouldRunAutomaticUpdateCheck(globalCfg_.gui.lastUpdateCheck))
+    /*if (shouldRunAutomaticUpdateCheck(globalCfg_.gui.lastUpdateCheck))
     {
         flashStatusInformation(_("Searching for program updates..."));
         //synchronous update check is sufficient here:
         automaticUpdateCheckEval(this, globalCfg_.gui.lastUpdateCheck, globalCfg_.gui.lastOnlineVersion,
                                  automaticUpdateCheckRunAsync(automaticUpdateCheckPrepare().get()).get());
-    }
+    }*/
 }
 
 
@@ -4852,7 +4853,7 @@ void MainDialog::OnRegularUpdateCheck(wxIdleEvent& event)
     //execute just once per startup!
     Disconnect(wxEVT_IDLE, wxIdleEventHandler(MainDialog::OnRegularUpdateCheck), nullptr, this);
 
-    if (shouldRunAutomaticUpdateCheck(globalCfg_.gui.lastUpdateCheck))
+    /*if (shouldRunAutomaticUpdateCheck(globalCfg_.gui.lastUpdateCheck))
     {
         flashStatusInformation(_("Searching for program updates..."));
 
@@ -4864,7 +4865,7 @@ void MainDialog::OnRegularUpdateCheck(wxIdleEvent& event)
             automaticUpdateCheckEval(this, globalCfg_.gui.lastUpdateCheck, globalCfg_.gui.lastOnlineVersion,
                                      resultAsync.get()); //run on main thread:
         });
-    }
+    }*/
 }
 
 

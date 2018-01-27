@@ -1,3 +1,4 @@
+#include <zen/warn_static.h> //GS added 
 #include "versioning.h"
 #include <cstddef> //required by GCC 4.8.1 to find ptrdiff_t
 

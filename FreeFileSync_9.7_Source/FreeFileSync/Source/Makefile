@@ -123,5 +123,7 @@ install:
 	$(APPSHAREDIR)
 
 	mkdir -p $(DOCSHAREDIR)
-	cp ../Build/Changelog.txt $(DOCSHAREDIR)/changelog
+	# GS fix:
+	# cp ../Build/Changelog.txt $(DOCSHAREDIR)/Changelog
+	cp ../../Changelog.txt $(DOCSHAREDIR)/changelog
 	gzip $(DOCSHAREDIR)/changelog
